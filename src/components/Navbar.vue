@@ -22,10 +22,10 @@
           <a class="nav-link" aria-current="page" href="#">건의게시판</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">공지사항</a>
+          <router-link to="/Notice"><a class="nav-link" href="#">공지사항</a></router-link>
         </li>
         <li class="nav-item">
-        <a id="faq" class="nav-link" href="#"><router-link to="/Faq" >FAQ</router-link>  </a>
+        <router-link to="/Faq" ><a id="faq" class="nav-link" href="#">FAQ  </a></router-link>
         </li>
         
       </ul>
@@ -39,10 +39,13 @@
 
 <script>
 import Faq from './Faq.vue';
+import Notice from './Notice.vue';
+
 export default {
 name:'Navbar',
 components:{
   Faq:Faq,
+  Notice:Notice,
 }
 }
 </script>
