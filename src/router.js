@@ -2,6 +2,8 @@ import { createWebHistory, createRouter } from "vue-router";
 // 여기에 컴포넌트를 import해와야 밑에다 적을 수 있음
 import Faq from './components/Faq.vue';
 import Notice from './components/Notice.vue';
+import Home from './components/Home.vue';
+import Suggestion from './components/suggestion_board.vue';
 
 const routes = [
   {
@@ -12,6 +14,14 @@ const routes = [
   {
     path:"/Notice",
     component: Notice,
+  },
+  {
+    path:"/Home",
+    component:Home,
+  },
+  {
+    path:"/Suggestion",
+    component: Suggestion,
   }
 ];
 

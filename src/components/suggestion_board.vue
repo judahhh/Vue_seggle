@@ -1,14 +1,12 @@
 <template>
-<div>
-    <br><br><br><br>
-<h1 style="float:left; margin-left:40px;font-weight:bold;">
-    공지사항 
-</h1> 
-<input type="text" value="검색" style="float:right;">
-</div>
+
 <br><br><br><br>
-<div class="board-list">
-    <table class="table">
+<h1 style="float:left; margin-left:40px;font-weight:bold;">
+건의게시판
+</h1>
+
+<br><br><br><br>
+  <table class="table">
       <thead>
       <tr class="table-dark">
         <th scope="col">No</th>
@@ -26,39 +24,18 @@
       </tr>
       </tbody>
     </table>
-
-  <!-- <div class="pagination w3-bar w3-padding-16 w3-small" v-if="paging.total_list_cnt > 0">
-      <span class="pg">
-      <a href="javascript:;" @click="fnPage(1)" class="first w3-button w3-border">&lt;&lt;</a>
-      <a href="javascript:;" v-if="paging.start_page > 10" @click="fnPage(`${paging.start_page-1}`)"
-         class="prev w3-button w3-border">&lt;</a>
-      <template v-for=" (n,index) in paginavigation()">
-          <template v-if="paging.page==n">
-              <strong class="w3-button w3-border w3-green" :key="index">{{ n }}</strong>
-          </template>
-          <template v-else>
-              <a class="w3-button w3-border" href="javascript:;" @click="fnPage(`${n}`)" :key="index">{{ n }}</a>
-          </template>
-      </template>
-      <a href="javascript:;" v-if="paging.total_page_cnt > paging.end_page"
-         @click="fnPage(`${paging.end_page+1}`)" class="next w3-button w3-border">&gt;</a>
-      <a href="javascript:;" @click="fnPage(`${paging.total_page_cnt}`)" class="last w3-button w3-border">&gt;&gt;</a>
-      </span>
-    </div> -->
-
-</div>
-
 </template>
 
 <script>
 
 export default{ 
-name:'Notice',
+name:'Suggestion',
 components:{
+    
 },
 data(){
     return{
-         requestBody: {}, //리스트 페이지 데이터전송
+          requestBody: {}, //리스트 페이지 데이터전송
       list: {}, //리스트 데이터
       no: '', //게시판 숫자처리
       paging: {
@@ -84,20 +61,16 @@ data(){
         for (let i = start_page; i <= end_page; i++) pageNumber.push(i);
         return pageNumber;
       }
-    
-
 };
     },
     setup(){},
     created(){},
     mounted(){
-        this.fnGetList()
+         this.fnGetList()
     },
     unmounted(){},
-
     methods:{
-
- fnGetList() {
+        fnGetList() {
       this.list = [
         {
             "idx":1,
@@ -119,8 +92,6 @@ data(){
         }
       ]
     }
-
-
     }
 }
 </script>

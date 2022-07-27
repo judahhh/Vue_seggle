@@ -1,7 +1,5 @@
 <template>
 <Navbar/>
-<br><br><br><br>
-
 
 <router-view></router-view>
 <!-- 라우터뷰 태그도 써줘야지 routerlink태그를 눌렀을때 

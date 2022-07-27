@@ -2,7 +2,7 @@
   <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light ">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Seggle</a>
+    <router-link to="/Home"><a class="navbar-brand" href="#">Seggle</a></router-link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -19,13 +19,13 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">건의게시판</a>
+          <router-link to="/Suggestion" ><a class="nav-link" aria-current="page" href="#">건의게시판</a></router-link>
         </li>
         <li class="nav-item">
           <router-link to="/Notice"><a class="nav-link" href="#">공지사항</a></router-link>
         </li>
         <li class="nav-item">
-        <router-link to="/Faq" ><a id="faq" class="nav-link" href="#">FAQ  </a></router-link>
+        <router-link to="/Faq" ><a class="nav-link" href="#">FAQ</a></router-link>
         </li>
         
       </ul>
@@ -38,14 +38,17 @@
 </template>
 
 <script>
+
 import Faq from './Faq.vue';
 import Notice from './Notice.vue';
+import Suggestion from './suggestion_board.vue';
 
 export default {
 name:'Navbar',
 components:{
   Faq:Faq,
   Notice:Notice,
+  Suggestion:Suggestion,
 }
 }
 </script>
@@ -59,10 +62,11 @@ button{
   background-color: black;
   font-weight: bold;
 }
-#faq{
-  /* 이게 왜 적용이 안되지? 
-  부트스트랩으로 따온 메뉴에 스타일 적용해서?  */
-  text-decoration: none;
-  color: grey;
+
+a{text-decoration: none !important;}
+a:hover{
+  font-weight: bold;
+  color :black;
+
 }
 </style>

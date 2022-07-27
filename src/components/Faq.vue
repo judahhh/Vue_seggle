@@ -1,5 +1,6 @@
 <template>
 <div>
+  <br><br><br>
 <h1 style="float:left; margin-left:40px;font-weight:bold;">FAQ</h1>
 </div>
 
