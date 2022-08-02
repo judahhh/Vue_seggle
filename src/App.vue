@@ -1,4 +1,4 @@
-<template>
+<template >
 <Navbar/>
 
 <router-view></router-view>
@@ -31,7 +31,8 @@ export default {
   color: black;
   margin-left: 100px;
   margin-right: 100px;
-  
+ /* overflow-x: hidden; */
+ /* 이걸 하면 갑자기 이미지 크기가 줄어듦 */
 }
 
 
