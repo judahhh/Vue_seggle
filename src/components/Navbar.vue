@@ -29,8 +29,8 @@
         </li>
         
       </ul>
-      <button type="button" class="">로그인</button>
-      <button type="button" class="">회원가입</button>
+     <router-link to="/Login" ><button type="button" class="">로그인</button></router-link>
+       <router-link to="/Register"><button type="button" class="">회원가입</button></router-link>
     </div>
   </div>
 </nav>
